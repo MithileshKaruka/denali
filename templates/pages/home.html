@@ -4,7 +4,8 @@
 {% block title %}Home page{% endblock title %}
 
 {% block content %}
-<h1>Home page</h1>
+<h1>
+  Hi {% if user.is_authenticated %} {{ user.username }}, {% endif %}
+</h1>
 <img src="{% static 'images/falconx.png' %}" class="img-fluid" alt="FalconX launch"/>
 {% endblock content %}
-
